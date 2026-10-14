@@ -1,0 +1,29 @@
+This project have two main classes:
+    * class Movie
+    * class Movies
+
+Class Movie
+    * It is in charge of creating the Movie objects
+    * Each movie object contains: name, rating and times watched as its constructor arguments.
+    * It also has its own getters for every argument.
+    * This class it is not supposed to interact with the main.cpp file, that's why here we only got
+      our class constructor, our private variables and getters functions, no more.
+
+Class Movies:
+    * Since Class Movies is the bridge between our Class Movie and our main.cpp file, Class Movies
+      must know the class Movie.
+    * Here it can be a little confusing: how can we use our Class Movie through Class Movies in main.cpp?
+    * Well here's the explanation:
+        * In our Class Movies, we can use our default constructor, since we don't need to initialize our object with any argument.
+        * In this Class Movies, we got our main function (add_movie), the one who will interact with our Class Movie:
+            void Movies::add_movie(std::string name, std::string rating, int watched){
+                catalogM.push_back(Movie{name, rating, watched});
+            }
+            As you can see, this function can be hard to understand at first, so we'll walk through it:
+                1) This function accepts three arguments, the same ones that our Class Movie constructor needs to create one object, so we'll use them.
+                2) Additionally, we're using the catalogM vector to store our Movie object, like I said, we're passing down
+                   the arguments of our function straight to our Movie constructor, that way we'll be gettin' in our Class Movie.
+                3) In other words, we are creating a Movie object as we store it in our private vector.
+                4) That way, we'll be able to iterate through our vector to access every object stored, therefore their methods/members.
+        * Once we've reached the class Movie out and stored the Movie objects in our private vector belonged to the Class Movies,
+          we can use some methods of the class to access our vector, therefore the Movie objects.
