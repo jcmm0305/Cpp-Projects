@@ -2,7 +2,14 @@
 #include "classMovies.h"
 
 void Movies::add_movie(std::string name, std::string rating, int watched){
-    catalogM.push_back(Movie{name, rating, watched});
+    //First we search in the whole list
+    for(const auto &movie : catalogM){
+        if(movie.get_name() == name){
+            std::cout<<"The movie was already added"<<std::endl; //We found it
+            return; //Stop the function here and exit
+        }
+    }
+    catalogM.push_back(Movie{name,rating,watched}); //Not found it, add the movie.
 }
 
 const std::vector<Movie>&Movies::get_catalog()const{

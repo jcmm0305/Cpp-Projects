@@ -16,7 +16,7 @@ class Movies{
         void add_movie (std::string name, std::string rating, int watched); //This is the funtion that will interact with our class Movie.
         void increment_watched(std::string movie_name); 
         void display_movies(std::vector<Movie> catalogM);
-        
+
         //Getters
         /*With the & symbol we return a reference, we don´t make a copy of the whole catalog. 
         we return a vector.*/
