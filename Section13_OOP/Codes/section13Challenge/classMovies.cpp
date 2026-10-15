@@ -5,7 +5,7 @@ void Movies::add_movie(std::string name, std::string rating, int watched){
     //First we search in the whole list
     for(const auto &movie : catalogM){
         if(movie.get_name() == name){
-            std::cout<<"The movie was already added"<<std::endl; //We found it
+            std::cout<<"The movie: "<<name<<" was already added"<<std::endl; //We found it
             return; //Stop the function here and exit
         }
     }
@@ -55,7 +55,9 @@ void Movies::increment_watched(std::string movie_name){
     for(auto &movie : catalogM){
         if(movie.get_name() == movie_name){
             movie.set_watched(movie.get_watched()+1);
-            return;
+        }
+        else{
+            std::cout<<"The movie: "<<"'"<<movie_name<<"'"<<" was not found, add it first."<<std::endl;
         }
     }
 }
