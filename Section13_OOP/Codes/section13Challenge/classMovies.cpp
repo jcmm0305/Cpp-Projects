@@ -16,6 +16,7 @@ void Movies::display_movies(std::vector<Movie> catalogM){
         std::cout<<"Name: "<<catalogM[i].get_name()<<std::endl;
         std::cout<<"Rating: "<<catalogM[i].get_rating()<<std::endl;
         std::cout<<"Times Watched: "<<catalogM[i].get_watched()<<std::endl;
+        std::cout<<"------------------------------------"<<std::endl;
     }
 
 }
