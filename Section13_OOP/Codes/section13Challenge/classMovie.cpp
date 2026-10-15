@@ -12,3 +12,5 @@ Movie::Movie(std::string name_val, std::string rating_val, int watched_val)
 const std::string &Movie::get_name() const{return name;}
 const std::string &Movie::get_rating() const{return rating;}
 const int Movie::get_watched() const{return watched;}
+
+void Movie::set_watched(int watched_val){watched = watched_val;}
