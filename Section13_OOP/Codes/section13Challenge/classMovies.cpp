@@ -12,9 +12,10 @@ const std::vector<Movie>&Movies::get_catalog()const{
 void Movies::display_movies(std::vector<Movie> catalogM){
 
     for(size_t i = 0; i<catalogM.size(); i++){
-        std::cout<<catalogM[i].get_name()<<std::endl;
-        std::cout<<catalogM[i].get_rating()<<std::endl;
-        std::cout<<catalogM[i].get_watched()<<std::endl;
+        std::cout<<"Movie "<<"["<<i+1<<"]"<<std::endl;
+        std::cout<<"Name: "<<catalogM[i].get_name()<<std::endl;
+        std::cout<<"Rating: "<<catalogM[i].get_rating()<<std::endl;
+        std::cout<<"Times Watched: "<<catalogM[i].get_watched()<<std::endl;
     }
 
 }
