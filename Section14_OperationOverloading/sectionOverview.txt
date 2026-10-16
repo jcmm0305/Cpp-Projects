@@ -1,0 +1,7 @@
+- What is a operator overloading?
+- Overloading the assignment operator (=)
+    * Copy Semantics
+    * Move Semantics
+- Overloading operators as member functions
+- OVerloading operators as global functions
+- Overloading stream insertion (<<) and extraction operators (>>)
