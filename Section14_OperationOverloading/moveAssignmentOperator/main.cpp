@@ -40,7 +40,7 @@
 #include <vector>
 #include "mystring.h"
 
-int name(){
+int main(){
 
     Mystring a{"Hello"};    //Overloaded Constructor
     a = Mystring{"Hola"};  //Overloaded Constructor then Move Assignment

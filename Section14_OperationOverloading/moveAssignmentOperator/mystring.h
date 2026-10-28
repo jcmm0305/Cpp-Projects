@@ -27,10 +27,4 @@ class Mystring{
 };
 
 
-
-
-
-
-
-
 #endif
