@@ -38,9 +38,10 @@ int main(){
     larryLow.display();
 
     Mystring stooges = larry + "Moe";
+    stooges.display();
     //Mystring stooges = "Larry"+ moe; //Compile error
 
-    Mystring two_stooges = moe + " " = "Larry";
+    Mystring two_stooges = moe + " " + "Larry";
     two_stooges.display();
 
     Mystring three_stooges = moe + " " + larry + " " + "Curly";
